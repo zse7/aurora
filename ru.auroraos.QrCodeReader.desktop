@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.auroraos.QrCodeReader
+Exec=/usr/bin/ru.auroraos.QrCodeReader
+Name=QR Code Reader
+Name[ru]=Сканер QR-кодов
+
+[X-Application]
+Permissions=Camera;WebView;Location;Internet;UserDirs
+OrganizationName=ru.auroraos
+ApplicationName=QrCodeReader
+

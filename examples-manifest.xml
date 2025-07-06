@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generated file. This file is used by SDK to show example inside Welcome screen. It is not the part of the example. -->
+<instructionals module="Aurora OS Examples">
+ <examples>
+  <example name="QR Code Reader" projectPath="ru.auroraos.QrCodeReader.pro" imageUrl="C:/Users/Denis/AppData/Roaming/AuroraOS-SDK-5.1.5.105/QtCreator\Aurora OS Examples\QrCodeReader\example-icon.png">
+   <description><![CDATA[The project provides an example of using video filters to process QR codes]]></description>
+   <tags>AuroraOS,example,qr</tags>
+   <platforms>Mer</platforms>
+   <preferredFeatures>Mer.Wizard.Feature.Emulator</preferredFeatures>
+   <fileToOpen>/qml/QrCodeReader.qml</fileToOpen>
+  </example>
+ </examples>
+</instructionals>

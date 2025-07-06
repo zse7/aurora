@@ -1,0 +1,106 @@
+stages:
+  - build
+  - sign
+  - validation
+
+build-aurora_5_1_0_100_aarch64:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-5.1.0.100-base-aarch64
+
+sign-aurora_5_1_0_100_aarch64:
+  stage: sign
+  dependencies:
+    - build-aurora_5_1_0_100_aarch64
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./sign.sh -r ./artifacts
+
+validation-aurora_5_1_0_100_aarch64:
+  stage: validation
+  dependencies:
+    - sign-aurora_5_1_0_100_aarch64
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/aurora-utils/rpm_validator /home/gitlab-runner/Aurora5PlatformSDK/ ./artifacts/ru.auroraos.QrCodeReader-0.1.0-1.aarch64.rpm
+
+build-aurora_5_1_0_100_armv7hl:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-5.1.0.100-base-armv7hl
+
+sign-aurora_5_1_0_100_armv7hl:
+  stage: sign
+  dependencies:
+    - build-aurora_5_1_0_100_armv7hl
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./sign.sh -r ./artifacts
+
+validation-aurora_5_1_0_100_armv7hl:
+  stage: validation
+  dependencies:
+    - sign-aurora_5_1_0_100_armv7hl
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/aurora-utils/rpm_validator /home/gitlab-runner/Aurora5PlatformSDK/ ./artifacts/ru.auroraos.QrCodeReader-0.1.0-1.armv7hl.rpm
+
+build-aurora_5_1_0_100_x86_64:
+  stage: build
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./build.sh -a ./ -t AuroraOS-5.1.0.100-base-x86_64
+
+sign-aurora_5_1_0_100_x86_64:
+  stage: sign
+  dependencies:
+    - build-aurora_5_1_0_100_x86_64
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/Aurora5PlatformSDK/sdks/aurora_psdk/sdk-chroot ./sign.sh -r ./artifacts
+
+validation-aurora_5_1_0_100_x86_64:
+  stage: validation
+  dependencies:
+    - sign-aurora_5_1_0_100_x86_64
+  tags:
+    - aurora_psdk_runner
+  artifacts:
+    paths:
+      - ./artifacts/*.rpm
+  script:
+    - /home/gitlab-runner/aurora-utils/rpm_validator /home/gitlab-runner/Aurora5PlatformSDK/ ./artifacts/ru.auroraos.QrCodeReader-0.1.0-1.x86_64.rpm
