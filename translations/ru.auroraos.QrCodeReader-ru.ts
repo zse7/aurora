@@ -40,7 +40,7 @@
 <context>
     <name>QrCodeReader</name>
     <message>
-        <location filename="../qml/QrCodeReader.qml" line="10"/>
+        <location filename="../qml/QrCodeReader.qml" line="11"/>
         <source>QR Code Reader</source>
         <translation>Сканер QR‑кодов</translation>
     </message>
@@ -48,12 +48,12 @@
 <context>
     <name>RecognitionPage</name>
     <message>
-        <location filename="../qml/pages/RecognitionPage.qml" line="32"/>
+        <location filename="../qml/pages/RecognitionPage.qml" line="48"/>
         <source>Сканирование</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/RecognitionPage.qml" line="83"/>
+        <location filename="../qml/pages/RecognitionPage.qml" line="106"/>
         <source>Отсканируйте QR-код на парте</source>
         <translation type="unfinished"></translation>
     </message>
@@ -104,7 +104,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/RoleSelectionPage.qml" line="52"/>
+        <location filename="../qml/pages/RoleSelectionPage.qml" line="55"/>
         <source>Я преподаватель</source>
         <translation type="unfinished"></translation>
     </message>

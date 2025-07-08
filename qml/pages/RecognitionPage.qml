@@ -10,6 +10,22 @@ Page {
     id: recognitionPage
     objectName: "recognitionPage"
 
+    property var appWindow
+
+    function handleScanResult(deskNumber) {
+        if (!appWindow) {
+            console.log("appWindow не передан в RecognitionPage")
+            return
+        }
+        if (appWindow.userRole === "student") {
+            pageStack.push(Qt.resolvedUrl("StubPage.qml"), { deskNumber: deskNumber })
+        } else if (appWindow.userRole === "teacher") {
+            pageStack.push(Qt.resolvedUrl("TeacherPage.qml"), { deskNumber: deskNumber })
+        } else {
+            console.log("Роль не выбрана")
+        }
+    }
+
     Rectangle {
         anchors.fill: parent
         color: "#22333B"  // Основной цвет страницы
@@ -40,6 +56,13 @@ Page {
         id: qrFilter
         objectName: "qrFilter"
         active: true
+
+        onResultChanged: {
+            if (result && result.length > 0) {
+                handleScanResult(result.trim())
+                clearResult()
+            }
+        }
     }
 
     VideoOutput {
@@ -165,7 +188,7 @@ Page {
         }
         width: parent.width / 2
         color: "#2A3A42"
-        onClicked: pageStack.push("StubPage.qml", { deskNumber: "45" })
+        onClicked: handleScanResult("45")
     }
 
     Component {

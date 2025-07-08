@@ -6,6 +6,7 @@ import "pages"
 
 ApplicationWindow {
     id: appWindow
+    property string userRole: ""  // "student" или "teacher"
 
     readonly property string appName: qsTr("QR Code Reader")
 

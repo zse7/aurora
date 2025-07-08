@@ -35,7 +35,10 @@ Page {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: pageStack.push(Qt.resolvedUrl("RecognitionPage.qml"))
+                onClicked: {
+                    appWindow.userRole = "student"
+                    pageStack.push(Qt.resolvedUrl("RecognitionPage.qml"), { appWindow: appWindow })
+                }
             }
         }
 
@@ -60,7 +63,10 @@ Page {
 
             MouseArea {
                 anchors.fill: parent
-                onClicked: pageStack.push(Qt.resolvedUrl("TeacherPage.qml"))
+                onClicked: {
+                    appWindow.userRole = "teacher"
+                    pageStack.push(Qt.resolvedUrl("RecognitionPage.qml"), { appWindow: appWindow })
+                }
             }
         }
     }
