@@ -46,11 +46,5 @@ DISTFILES += \
     rpm/ru.auroraos.QrCodeReader.spec \
     translations/*.ts \
     ru.auroraos.QrCodeReader.desktop \
-    LICENSE.BSD-3-Clause.md \
-    CODE_OF_CONDUCT.md \
-    CONTRIBUTING.md \
-    AUTHORS.md \
-    README.md \
-    README.ru.md \
 
 AURORAAPP_ICONS = 86x86 108x108 128x128 172x172

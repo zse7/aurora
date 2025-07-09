@@ -2,6 +2,44 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru">
 <context>
+    <name>ConductTestingPage</name>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="23"/>
+        <source>Провести тестирование</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="49"/>
+        <source>Выберите тему теста:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="59"/>
+        <source>Темы тестов</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="73"/>
+        <source>Или введите тему вручную</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="80"/>
+        <source>Количество студентов: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="96"/>
+        <source>Начать тестирование</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="108"/>
+        <source>Выберите или введите тему</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LoginPage</name>
     <message>
         <location filename="../qml/pages/LoginPage.qml" line="59"/>
@@ -97,6 +135,24 @@
     </message>
 </context>
 <context>
+    <name>ResultPage</name>
+    <message>
+        <location filename="../qml/pages/ResultPage.qml" line="32"/>
+        <source>Результаты тестирования</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ResultPage.qml" line="57"/>
+        <source>Список результатов</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ResultPage.qml" line="95"/>
+        <source>Парта: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>RoleSelectionPage</name>
     <message>
         <location filename="../qml/pages/RoleSelectionPage.qml" line="27"/>
@@ -138,6 +194,64 @@
     </message>
 </context>
 <context>
+    <name>TeacherMainPage</name>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="26"/>
+        <source>Экран преподавателя</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="53"/>
+        <source>Введите количество студентов</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="76"/>
+        <source>Подтвердить количество</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="99"/>
+        <source>Введите корректное количество студентов</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="108"/>
+        <source>Количество подтверждено: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="132"/>
+        <source>Провести тестирование</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="145"/>
+        <source>Сначала подтвердите количество студентов</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="170"/>
+        <source>Загрузить тесты</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="193"/>
+        <source>Просмотр результатов</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="217"/>
+        <source>Присутствующие студенты</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TeacherMainPage.qml" line="241"/>
+        <source>Парта: </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>TeacherPage</name>
     <message>
         <location filename="../qml/pages/TeacherPage.qml" line="21"/>
@@ -172,6 +286,19 @@
     <message>
         <location filename="../qml/pages/TeacherPage.qml" line="143"/>
         <source>Статус</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UploadTestsPage</name>
+    <message>
+        <location filename="../qml/pages/UploadTestsPage.qml" line="31"/>
+        <source>Загрузить тесты</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/UploadTestsPage.qml" line="66"/>
+        <source>Добавить тест</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
