@@ -20,7 +20,7 @@ Page {
         if (appWindow.userRole === "student") {
             pageStack.push(Qt.resolvedUrl("StubPage.qml"), { deskNumber: deskNumber })
         } else if (appWindow.userRole === "teacher") {
-            pageStack.push(Qt.resolvedUrl("TeacherPage.qml"), { deskNumber: deskNumber })
+            pageStack.push(Qt.resolvedUrl("TeacherMainPage.qml"), { deskNumber: deskNumber })
         } else {
             console.log("Роль не выбрана")
         }
