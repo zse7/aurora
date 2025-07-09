@@ -15,9 +15,11 @@ Page {
 
     // Верхний заголовок (апбар)
     Rectangle {
-        width: parent.width + 40
+        id: header
+        width: parent.width
         height: Theme.itemSizeLarge
         color: "#1F252A"
+        z: 1
 
         Text {
             text: qsTr("Провести тестирование")
@@ -28,34 +30,33 @@ Page {
     }
 
     SilicaFlickable {
-        anchors.fill: parent
-        contentHeight: mainColumn.implicitHeight
+        anchors {
+            top: header.bottom
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
+        contentHeight: mainColumn.height + Theme.paddingLarge * 2
 
         Column {
             id: mainColumn
-            width: parent.width * 0.8
-            spacing: Theme.paddingLarge * 2
+            width: parent.width * 0.9
+            spacing: Theme.paddingLarge
             anchors.horizontalCenter: parent.horizontalCenter
+            anchors.top: parent.top
+            anchors.topMargin: Theme.paddingLarge * 2
 
-            // ВЕРХНЯЯ ПРОКЛАДКА для центрирования
-            Rectangle {
-                width: 1
-                height: (parent.height - mainColumn.implicitHeight) / 2
-                color: "transparent"
-            }
-
-            // СОДЕРЖИМОЕ
             Label {
                 text: qsTr("Выберите тему теста:")
                 color: "#ECF0F1"
                 font.pixelSize: Theme.fontSizeMedium
+                width: parent.width
                 horizontalAlignment: Text.AlignHCenter
-                anchors.horizontalCenter: parent.horizontalCenter
             }
 
             ComboBox {
                 id: topicCombo
-                width: parent.width * 0.85
+                width: parent.width
                 label: qsTr("Темы тестов")
                 menu: ContextMenu {
                     MenuItem { text: "Математика" }
@@ -69,7 +70,7 @@ Page {
 
             TextField {
                 id: testTopicField
-                width: parent.width * 0.85
+                width: parent.width
                 placeholderText: qsTr("Или введите тему вручную")
                 color: "#ECF0F1"
                 placeholderColor: "#7F8C8D"
@@ -80,30 +81,31 @@ Page {
                 text: qsTr("Количество студентов: ") + conductTestingPage.studentCount
                 color: "#ECF0F1"
                 font.pixelSize: Theme.fontSizeMedium
+                width: parent.width
                 horizontalAlignment: Text.AlignHCenter
-                anchors.horizontalCenter: parent.horizontalCenter
             }
 
+            // Кнопка "Начать тестирование" с закруглением
             Rectangle {
-                width: parent.width * 0.7
-                height: Theme.itemSizeExtraLarge - 50
-                radius: height / 2
-                color: "#1F252A"
+                width: parent.width
+                height: Theme.itemSizeMedium
+                radius: height / 2  // Закругление равное половине высоты
+                color: pressed ? "#3A4A52" : "#2A3A42"
                 border.color: "#3A4A52"
-                border.width: 2
+                border.width: 1
 
                 Label {
                     text: qsTr("Начать тестирование")
                     anchors.centerIn: parent
                     color: "#ECF0F1"
-                    font.pixelSize: Theme.fontSizeLarge
-                    font.bold: true
+                    font.pixelSize: Theme.fontSizeMedium
                 }
 
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        var topic = testTopicField.text.length > 0 ? testTopicField.text : (topicCombo.currentItem ? topicCombo.currentItem.text : "")
+                        var topic = testTopicField.text.length > 0 ? testTopicField.text :
+                                (topicCombo.currentItem ? topicCombo.currentItem.text : "")
                         if (topic.length === 0) {
                             showBanner(qsTr("Выберите или введите тему"))
                             return
@@ -113,11 +115,34 @@ Page {
                             studentCount: conductTestingPage.studentCount
                         })
                     }
+                    onPressed: parent.color = "#3A4A52"
+                    onReleased: parent.color = "#2A3A42"
                 }
-                Rectangle {
-                    width: 1
-                    height: (parent.height - mainColumn.implicitHeight) / 2
-                    color: "transparent"
+            }
+
+            // Кнопка "Проверить раздачу вариантов" с закруглением
+            Rectangle {
+                width: parent.width
+                height: Theme.itemSizeMedium
+                radius: height / 2  // Закругление равное половине высоты
+                color: pressed ? "#3A4A52" : "#2A3A42"
+                border.color: "#3A4A52"
+                border.width: 1
+
+                Label {
+                    text: qsTr("Проверить раздачу вариантов")
+                    anchors.centerIn: parent
+                    color: "#ECF0F1"
+                    font.pixelSize: Theme.fontSizeMedium
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        pageStack.push(Qt.resolvedUrl("VariantTestPage.qml"))
+                    }
+                    onPressed: parent.color = "#3A4A52"
+                    onReleased: parent.color = "#2A3A42"
                 }
             }
         }

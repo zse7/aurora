@@ -36,11 +36,13 @@ HEADERS += \
     src/types/qrcodetypes.h \
     src/handler/qrcodehandler_p.h \
     src/handler/qrcodehandler.h \
+    src/types/variantdistributor.h
 
 SOURCES += \
     src/createqrcodepagecontroller.cpp \
     src/handler/qrcodehandler.cpp \
     src/main.cpp \
+    src/variantdistributor.cpp
 
 DISTFILES += \
     rpm/ru.auroraos.QrCodeReader.spec \

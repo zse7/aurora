@@ -4,38 +4,43 @@
 <context>
     <name>ConductTestingPage</name>
     <message>
-        <location filename="../qml/pages/ConductTestingPage.qml" line="23"/>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="25"/>
         <source>Провести тестирование</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ConductTestingPage.qml" line="49"/>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="50"/>
         <source>Выберите тему теста:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ConductTestingPage.qml" line="59"/>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="60"/>
         <source>Темы тестов</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ConductTestingPage.qml" line="73"/>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="74"/>
         <source>Или введите тему вручную</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ConductTestingPage.qml" line="80"/>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="81"/>
         <source>Количество студентов: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ConductTestingPage.qml" line="96"/>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="98"/>
         <source>Начать тестирование</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/ConductTestingPage.qml" line="108"/>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="110"/>
         <source>Выберите или введите тему</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ConductTestingPage.qml" line="133"/>
+        <source>Проверить раздачу вариантов</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -254,37 +259,37 @@
 <context>
     <name>TeacherPage</name>
     <message>
-        <location filename="../qml/pages/TeacherPage.qml" line="21"/>
+        <location filename="../qml/pages/TeacherPage.qml" line="23"/>
         <source>Преподаватель</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TeacherPage.qml" line="52"/>
+        <location filename="../qml/pages/TeacherPage.qml" line="54"/>
         <source>Количество студентов:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TeacherPage.qml" line="79"/>
+        <location filename="../qml/pages/TeacherPage.qml" line="81"/>
         <source>Подтвердить</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TeacherPage.qml" line="111"/>
+        <location filename="../qml/pages/TeacherPage.qml" line="113"/>
         <source>Раздать варианты</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TeacherPage.qml" line="135"/>
+        <location filename="../qml/pages/TeacherPage.qml" line="137"/>
         <source>Парта</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TeacherPage.qml" line="139"/>
+        <location filename="../qml/pages/TeacherPage.qml" line="141"/>
         <source>Студент</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TeacherPage.qml" line="143"/>
+        <location filename="../qml/pages/TeacherPage.qml" line="145"/>
         <source>Статус</source>
         <translation type="unfinished"></translation>
     </message>

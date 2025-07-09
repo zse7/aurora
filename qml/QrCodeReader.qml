@@ -13,5 +13,5 @@ ApplicationWindow {
     objectName: "appWindow"
     allowedOrientations: defaultAllowedOrientations
     cover: Qt.resolvedUrl("cover/DefaultCoverPage.qml")
-    initialPage: Qt.resolvedUrl("pages/LoginPage.qml")
+    initialPage: Qt.resolvedUrl("pages/TeacherMainPage.qml")
 }
